@@ -1,0 +1,3975 @@
+<script
+  type="text/javascript"
+  src="https://www.gstatic.com/charts/loader.js"
+></script>
+<div id="chart_div"></div>
+<script>
+  google.charts.load("current", { packages: ["treemap"] });
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn("string", "ID");
+    data.addColumn("string", "Parent");
+    data.addColumn("number", "Number Of Lines");
+    data.addRows([
+      ["./resources.arsc", ".", 1024],
+      ["./res/anim/design_snackbar_out.xml", "./res/anim", 8],
+      ["./res/anim/abc_slide_in_bottom.xml", "./res/anim", 8],
+      ["./res/anim/abc_slide_out_top.xml", "./res/anim", 8],
+      ["./res/anim/catalyst_fade_in.xml", "./res/anim", 8],
+      ["./res/anim/abc_tooltip_exit.xml", "./res/anim", 8],
+      ["./res/anim/catalyst_push_up_out.xml", "./res/anim", 8],
+      ["./res/anim/abc_popup_enter.xml", "./res/anim", 8],
+      ["./res/anim/abc_fade_out.xml", "./res/anim", 8],
+      ["./res/anim/slide_up.xml", "./res/anim", 8],
+      ["./res/anim/no_animation.xml", "./res/anim", 8],
+      ["./res/anim/catalyst_push_up_in.xml", "./res/anim", 8],
+      ["./res/anim/abc_slide_in_top.xml", "./res/anim", 8],
+      ["./res/anim/slide_out_right.xml", "./res/anim", 8],
+      ["./res/anim/slide_down.xml", "./res/anim", 8],
+      ["./res/anim/slide_in_right.xml", "./res/anim", 8],
+      ["./res/anim/abc_grow_fade_in_from_bottom.xml", "./res/anim", 8],
+      ["./res/anim/dock_bottom_exit.xml", "./res/anim", 8],
+      ["./res/anim/abc_shrink_fade_out_from_bottom.xml", "./res/anim", 8],
+      ["./res/anim/abc_slide_out_bottom.xml", "./res/anim", 8],
+      ["./res/anim/lightbox_enter.xml", "./res/anim", 8],
+      ["./res/anim/catalyst_slide_up.xml", "./res/anim", 8],
+      ["./res/anim/pop.xml", "./res/anim", 8],
+      ["./res/anim/abc_tooltip_enter.xml", "./res/anim", 8],
+      ["./res/anim/abc_fade_in.xml", "./res/anim", 8],
+      ["./res/anim/design_snackbar_in.xml", "./res/anim", 8],
+      ["./res/anim/dock_bottom_enter.xml", "./res/anim", 8],
+      ["./res/anim/catalyst_fade_out.xml", "./res/anim", 8],
+      ["./res/anim/abc_popup_exit.xml", "./res/anim", 8],
+      ["./res/anim/catalyst_slide_down.xml", "./res/anim", 8],
+      ["./res/anim", "./res", 232],
+      [
+        "./res/drawable-v23/abc_control_background_material.xml",
+        "./res/drawable-v23",
+        8
+      ],
+      ["./res/drawable-v23", "./res", 8],
+      [
+        "./res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "./res/drawable-ldrtl-xxxhdpi-v17",
+        8
+      ],
+      [
+        "./res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+        "./res/drawable-ldrtl-xxxhdpi-v17",
+        8
+      ],
+      [
+        "./res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+        "./res/drawable-ldrtl-xxxhdpi-v17",
+        8
+      ],
+      ["./res/drawable-ldrtl-xxxhdpi-v17", "./res", 24],
+      [
+        "./res/drawable-xxhdpi-v4/design_ic_visibility_off.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_list_focused_holo.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_post_menu_reply.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_ic_star_half_black_36dp.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/bs_ic_clear.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_text_select_handle_middle_mtrl_dark.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/bs_ic_more_light.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_ic_star_half_black_16dp.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_video_player_replay.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_themes_organization.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_ic_star_half_black_48dp.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/node_modules_reactnativecalendars_src_calendar_img_previous.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_post_header_pin.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_dark.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_text_select_handle_right_mtrl_light.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_post_header_flag.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/design_ic_visibility.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_light.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_post_menu_link.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_ic_star_black_48dp.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/bs_ic_more.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_themes_check.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_post_menu_emoji.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/googleg_standard_color_18.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_post_menu_flag.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_themes_mattermost_dark.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_themes_mattermost.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      ["./res/drawable-xxhdpi-v4/search.png", "./res/drawable-xxhdpi-v4", 8],
+      [
+        "./res/drawable-xxhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      ["./res/drawable-xxhdpi-v4/splash.png", "./res/drawable-xxhdpi-v4", 40],
+      [
+        "./res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_video_player_fullscreen.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_post_menu_copy.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_light.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/node_modules_reactnativecalendars_src_calendar_img_next.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_thumb.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_no_results_pin.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_post_menu_trash.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_post_menu_edit.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_video_player_pause.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_list_pressed_holo_dark.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_post_menu_pin.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_text_select_handle_middle_mtrl_light.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_themes_windows_dark.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/ic_action_name.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/node_modules_reactnavigationstack_src_views_assets_backicon.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/ic_notif_action_reply.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_video_player_play.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/bs_ic_clear_light.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/googleg_disabled_color_18.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/dist_assets_images_channel_info_pin.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
+        "./res/drawable-xxhdpi-v4",
+        8
+      ],
+      ["./res/drawable-xxhdpi-v4", "./res", 736],
+      [
+        "./res/drawable-ldrtl-mdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "./res/drawable-ldrtl-mdpi-v17",
+        8
+      ],
+      [
+        "./res/drawable-ldrtl-mdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+        "./res/drawable-ldrtl-mdpi-v17",
+        8
+      ],
+      [
+        "./res/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+        "./res/drawable-ldrtl-mdpi-v17",
+        8
+      ],
+      ["./res/drawable-ldrtl-mdpi-v17", "./res", 24],
+      ["./res/color-v23/abc_tint_seek_thumb.xml", "./res/color-v23", 8],
+      ["./res/color-v23/abc_tint_btn_checkable.xml", "./res/color-v23", 8],
+      [
+        "./res/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "./res/color-v23",
+        8
+      ],
+      ["./res/color-v23/abc_tint_switch_track.xml", "./res/color-v23", 8],
+      [
+        "./res/color-v23/abc_color_highlight_material.xml",
+        "./res/color-v23",
+        8
+      ],
+      ["./res/color-v23/design_tint_password_toggle.xml", "./res/color-v23", 8],
+      ["./res/color-v23/abc_tint_edittext.xml", "./res/color-v23", 8],
+      ["./res/color-v23/abc_tint_spinner.xml", "./res/color-v23", 8],
+      ["./res/color-v23/abc_tint_default.xml", "./res/color-v23", 8],
+      [
+        "./res/color-v23/abc_btn_colored_text_material.xml",
+        "./res/color-v23",
+        8
+      ],
+      ["./res/color-v23", "./res", 80],
+      ["./res/interpolator/mtrl_linear.xml", "./res/interpolator", 8],
+      ["./res/interpolator", "./res", 8],
+      [
+        "./res/mipmap-xxxhdpi-v4/ic_notification.png",
+        "./res/mipmap-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/mipmap-xxxhdpi-v4/ic_launcher_foreground.png",
+        "./res/mipmap-xxxhdpi-v4",
+        24
+      ],
+      [
+        "./res/mipmap-xxxhdpi-v4/ic_launcher.png",
+        "./res/mipmap-xxxhdpi-v4",
+        32
+      ],
+      [
+        "./res/mipmap-xxxhdpi-v4/ic_launcher_round.png",
+        "./res/mipmap-xxxhdpi-v4",
+        48
+      ],
+      [
+        "./res/mipmap-xxxhdpi-v4/ic_launcher_background.png",
+        "./res/mipmap-xxxhdpi-v4",
+        8
+      ],
+      ["./res/mipmap-xxxhdpi-v4", "./res", 120],
+      ["./res/drawable/navigation_empty_icon.xml", "./res/drawable", 8],
+      ["./res/drawable/abc_btn_default_mtrl_shape.xml", "./res/drawable", 8],
+      ["./res/drawable/ic_mtrl_chip_checked_circle.xml", "./res/drawable", 8],
+      ["./res/drawable/abc_btn_radio_material.xml", "./res/drawable", 8],
+      ["./res/drawable/abc_textfield_search_material.xml", "./res/drawable", 8],
+      [
+        "./res/drawable/common_google_signin_btn_text_dark_focused.xml",
+        "./res/drawable",
+        8
+      ],
+      ["./res/drawable/abc_seekbar_thumb_material.xml", "./res/drawable", 8],
+      ["./res/drawable/notification_bg_low.xml", "./res/drawable", 8],
+      ["./res/drawable/design_snackbar_background.xml", "./res/drawable", 8],
+      [
+        "./res/drawable/common_google_signin_btn_icon_light_normal.xml",
+        "./res/drawable",
+        8
+      ],
+      [
+        "./res/drawable/common_google_signin_btn_icon_dark.xml",
+        "./res/drawable",
+        8
+      ],
+      ["./res/drawable/abc_list_selector_holo_dark.xml", "./res/drawable", 8],
+      ["./res/drawable/abc_seekbar_track_material.xml", "./res/drawable", 8],
+      ["./res/drawable/ic_mtrl_chip_checked_black.xml", "./res/drawable", 8],
+      [
+        "./res/drawable/common_google_signin_btn_text_dark.xml",
+        "./res/drawable",
+        8
+      ],
+      ["./res/drawable/mtrl_snackbar_background.xml", "./res/drawable", 8],
+      [
+        "./res/drawable/abc_seekbar_tick_mark_material.xml",
+        "./res/drawable",
+        8
+      ],
+      ["./res/drawable/tooltip_frame_light.xml", "./res/drawable", 8],
+      ["./res/drawable/abc_vector_test.xml", "./res/drawable", 8],
+      [
+        "./res/drawable/common_google_signin_btn_icon_light_focused.xml",
+        "./res/drawable",
+        8
+      ],
+      ["./res/drawable/abc_text_cursor_material.xml", "./res/drawable", 8],
+      ["./res/drawable/abc_ic_search_api_material.xml", "./res/drawable", 8],
+      [
+        "./res/drawable/common_google_signin_btn_text_light.xml",
+        "./res/drawable",
+        8
+      ],
+      [
+        "./res/drawable/abc_cab_background_top_material.xml",
+        "./res/drawable",
+        8
+      ],
+      [
+        "./res/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "./res/drawable",
+        8
+      ],
+      ["./res/drawable/abc_tab_indicator_material.xml", "./res/drawable", 8],
+      ["./res/drawable/abc_ratingbar_small_material.xml", "./res/drawable", 8],
+      ["./res/drawable/notification_tile_bg.xml", "./res/drawable", 8],
+      ["./res/drawable/ic_mtrl_chip_close_circle.xml", "./res/drawable", 8],
+      [
+        "./res/drawable/abc_ic_voice_search_api_material.xml",
+        "./res/drawable",
+        8
+      ],
+      [
+        "./res/drawable/abc_cab_background_internal_bg.xml",
+        "./res/drawable",
+        8
+      ],
+      [
+        "./res/drawable/common_google_signin_btn_icon_dark_focused.xml",
+        "./res/drawable",
+        8
+      ],
+      [
+        "./res/drawable/abc_item_background_holo_light.xml",
+        "./res/drawable",
+        8
+      ],
+      [
+        "./res/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+        "./res/drawable",
+        8
+      ],
+      [
+        "./res/drawable/common_google_signin_btn_text_light_focused.xml",
+        "./res/drawable",
+        8
+      ],
+      ["./res/drawable/abc_ratingbar_material.xml", "./res/drawable", 8],
+      ["./res/drawable/abc_ic_menu_overflow_material.xml", "./res/drawable", 8],
+      ["./res/drawable/mtrl_tabs_default_indicator.xml", "./res/drawable", 8],
+      [
+        "./res/drawable/abc_ratingbar_indicator_material.xml",
+        "./res/drawable",
+        8
+      ],
+      [
+        "./res/drawable/common_google_signin_btn_text_light_normal.xml",
+        "./res/drawable",
+        8
+      ],
+      ["./res/drawable/abc_btn_check_material.xml", "./res/drawable", 8],
+      ["./res/drawable/abc_btn_borderless_material.xml", "./res/drawable", 8],
+      ["./res/drawable/design_fab_background.xml", "./res/drawable", 8],
+      ["./res/drawable/abc_switch_thumb_material.xml", "./res/drawable", 8],
+      ["./res/drawable/abc_ic_go_search_api_material.xml", "./res/drawable", 8],
+      ["./res/drawable/abc_ic_ab_back_material.xml", "./res/drawable", 8],
+      ["./res/drawable/abc_list_selector_holo_light.xml", "./res/drawable", 8],
+      [
+        "./res/drawable/common_google_signin_btn_text_disabled.xml",
+        "./res/drawable",
+        8
+      ],
+      [
+        "./res/drawable/common_google_signin_btn_icon_light.xml",
+        "./res/drawable",
+        8
+      ],
+      ["./res/drawable/notification_icon_background.xml", "./res/drawable", 8],
+      ["./res/drawable/abc_item_background_holo_dark.xml", "./res/drawable", 8],
+      ["./res/drawable/tooltip_frame_dark.xml", "./res/drawable", 8],
+      [
+        "./res/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "./res/drawable",
+        8
+      ],
+      [
+        "./res/drawable/common_google_signin_btn_text_dark_normal.xml",
+        "./res/drawable",
+        8
+      ],
+      ["./res/drawable/notification_background.xml", "./res/drawable", 8],
+      ["./res/drawable/redbox_top_border_background.xml", "./res/drawable", 8],
+      [
+        "./res/drawable/abc_spinner_textfield_background_material.xml",
+        "./res/drawable",
+        8
+      ],
+      [
+        "./res/drawable/common_google_signin_btn_icon_disabled.xml",
+        "./res/drawable",
+        8
+      ],
+      ["./res/drawable/notification_bg.xml", "./res/drawable", 8],
+      [
+        "./res/drawable/common_google_signin_btn_icon_dark_normal.xml",
+        "./res/drawable",
+        8
+      ],
+      ["./res/drawable/abc_ic_clear_material.xml", "./res/drawable", 8],
+      ["./res/drawable", "./res", 488],
+      ["./res/mipmap-hdpi-v4/ic_notification.png", "./res/mipmap-hdpi-v4", 8],
+      [
+        "./res/mipmap-hdpi-v4/ic_launcher_foreground.png",
+        "./res/mipmap-hdpi-v4",
+        24
+      ],
+      ["./res/mipmap-hdpi-v4/ic_launcher.png", "./res/mipmap-hdpi-v4", 16],
+      [
+        "./res/mipmap-hdpi-v4/ic_launcher_round.png",
+        "./res/mipmap-hdpi-v4",
+        16
+      ],
+      [
+        "./res/mipmap-hdpi-v4/ic_launcher_background.png",
+        "./res/mipmap-hdpi-v4",
+        8
+      ],
+      ["./res/mipmap-hdpi-v4", "./res", 72],
+      [
+        "./res/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+        "./res/layout-watch-v20",
+        8
+      ],
+      [
+        "./res/layout-watch-v20/abc_alert_dialog_title_material.xml",
+        "./res/layout-watch-v20",
+        8
+      ],
+      ["./res/layout-watch-v20", "./res", 16],
+      ["./res/mipmap-xhdpi-v4/ic_notification.png", "./res/mipmap-xhdpi-v4", 8],
+      [
+        "./res/mipmap-xhdpi-v4/ic_launcher_foreground.png",
+        "./res/mipmap-xhdpi-v4",
+        16
+      ],
+      ["./res/mipmap-xhdpi-v4/ic_launcher.png", "./res/mipmap-xhdpi-v4", 16],
+      [
+        "./res/mipmap-xhdpi-v4/ic_launcher_round.png",
+        "./res/mipmap-xhdpi-v4",
+        24
+      ],
+      [
+        "./res/mipmap-xhdpi-v4/ic_launcher_background.png",
+        "./res/mipmap-xhdpi-v4",
+        8
+      ],
+      ["./res/mipmap-xhdpi-v4", "./res", 72],
+      [
+        "./res/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "./res/drawable-ldrtl-xxhdpi-v17",
+        8
+      ],
+      [
+        "./res/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+        "./res/drawable-ldrtl-xxhdpi-v17",
+        8
+      ],
+      [
+        "./res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+        "./res/drawable-ldrtl-xxhdpi-v17",
+        8
+      ],
+      ["./res/drawable-ldrtl-xxhdpi-v17", "./res", 24],
+      ["./res/layout/abc_list_menu_item_checkbox.xml", "./res/layout", 8],
+      ["./res/layout/design_layout_snackbar_include.xml", "./res/layout", 8],
+      [
+        "./res/layout/abc_alert_dialog_button_bar_material.xml",
+        "./res/layout",
+        8
+      ],
+      ["./res/layout/redbox_item_frame.xml", "./res/layout", 8],
+      [
+        "./res/layout/abc_activity_chooser_view_list_item.xml",
+        "./res/layout",
+        8
+      ],
+      ["./res/layout/notification_template_big_media.xml", "./res/layout", 8],
+      ["./res/layout/design_layout_tab_icon.xml", "./res/layout", 8],
+      ["./res/layout/abc_screen_content_include.xml", "./res/layout", 8],
+      ["./res/layout/youtube_layout.xml", "./res/layout", 8],
+      ["./res/layout/abc_activity_chooser_view.xml", "./res/layout", 8],
+      ["./res/layout/abc_select_dialog_material.xml", "./res/layout", 8],
+      ["./res/layout/abc_action_bar_title_item.xml", "./res/layout", 8],
+      ["./res/layout/abc_screen_toolbar.xml", "./res/layout", 8],
+      ["./res/layout/bs_list_entry.xml", "./res/layout", 8],
+      ["./res/layout/abc_dialog_title_material.xml", "./res/layout", 8],
+      ["./res/layout/abc_search_view.xml", "./res/layout", 8],
+      [
+        "./res/layout/abc_search_dropdown_item_icons_2line.xml",
+        "./res/layout",
+        8
+      ],
+      ["./res/layout/abc_action_menu_item_layout.xml", "./res/layout", 8],
+      ["./res/layout/design_bottom_sheet_dialog.xml", "./res/layout", 8],
+      ["./res/layout/fps_view.xml", "./res/layout", 8],
+      ["./res/layout/bs_list_divider.xml", "./res/layout", 8],
+      ["./res/layout/design_bottom_navigation_item.xml", "./res/layout", 8],
+      ["./res/layout/abc_action_bar_up_container.xml", "./res/layout", 8],
+      ["./res/layout/abc_list_menu_item_layout.xml", "./res/layout", 8],
+      ["./res/layout/design_navigation_item_separator.xml", "./res/layout", 8],
+      ["./res/layout/notification_media_cancel_action.xml", "./res/layout", 8],
+      ["./res/layout/redbox_view.xml", "./res/layout", 8],
+      ["./res/layout/abc_action_menu_layout.xml", "./res/layout", 8],
+      ["./res/layout/notification_template_part_time.xml", "./res/layout", 8],
+      ["./res/layout/default_error_screen.xml", "./res/layout", 8],
+      ["./res/layout/abc_list_menu_item_radio.xml", "./res/layout", 8],
+      ["./res/layout/bs_header.xml", "./res/layout", 8],
+      ["./res/layout/mtrl_layout_snackbar_include.xml", "./res/layout", 8],
+      ["./res/layout/list_item.xml", "./res/layout", 8],
+      [
+        "./res/layout/abc_screen_simple_overlay_action_mode.xml",
+        "./res/layout",
+        8
+      ],
+      ["./res/layout/abc_popup_menu_item_layout.xml", "./res/layout", 8],
+      ["./res/layout/design_menu_item_action_area.xml", "./res/layout", 8],
+      [
+        "./res/layout/select_dialog_singlechoice_material.xml",
+        "./res/layout",
+        8
+      ],
+      ["./res/layout/select_dialog_item_material.xml", "./res/layout", 8],
+      ["./res/layout/bs_grid_entry.xml", "./res/layout", 8],
+      ["./res/layout/design_navigation_menu.xml", "./res/layout", 8],
+      [
+        "./res/layout/support_simple_spinner_dropdown_item.xml",
+        "./res/layout",
+        8
+      ],
+      ["./res/layout/notification_media_action.xml", "./res/layout", 8],
+      ["./res/layout/launch_screen.xml", "./res/layout", 8],
+      ["./res/layout/notification_template_media.xml", "./res/layout", 8],
+      ["./res/layout/abc_alert_dialog_material.xml", "./res/layout", 8],
+      ["./res/layout/design_navigation_item.xml", "./res/layout", 8],
+      ["./res/layout/abc_tooltip.xml", "./res/layout", 8],
+      ["./res/layout/abc_action_mode_bar.xml", "./res/layout", 8],
+      ["./res/layout/design_navigation_item_header.xml", "./res/layout", 8],
+      ["./res/layout/notification_template_lines_media.xml", "./res/layout", 8],
+      ["./res/layout/design_layout_snackbar.xml", "./res/layout", 8],
+      [
+        "./res/layout/notification_template_big_media_narrow_custom.xml",
+        "./res/layout",
+        8
+      ],
+      [
+        "./res/layout/abc_action_mode_close_item_material.xml",
+        "./res/layout",
+        8
+      ],
+      ["./res/layout/design_navigation_item_subheader.xml", "./res/layout", 8],
+      ["./res/layout/abc_list_menu_item_icon.xml", "./res/layout", 8],
+      ["./res/layout/abc_expanded_menu_layout.xml", "./res/layout", 8],
+      [
+        "./res/layout/notification_template_media_custom.xml",
+        "./res/layout",
+        8
+      ],
+      ["./res/layout/dev_loading_view.xml", "./res/layout", 8],
+      ["./res/layout/abc_cascading_menu_item_layout.xml", "./res/layout", 8],
+      ["./res/layout/design_text_input_password_icon.xml", "./res/layout", 8],
+      ["./res/layout/mtrl_layout_snackbar.xml", "./res/layout", 8],
+      ["./res/layout/design_navigation_menu_item.xml", "./res/layout", 8],
+      ["./res/layout/redbox_item_title.xml", "./res/layout", 8],
+      ["./res/layout/bottom_sheet_dialog.xml", "./res/layout", 8],
+      ["./res/layout/abc_popup_menu_header_item_layout.xml", "./res/layout", 8],
+      ["./res/layout/abc_alert_dialog_title_material.xml", "./res/layout", 8],
+      [
+        "./res/layout/notification_template_big_media_custom.xml",
+        "./res/layout",
+        8
+      ],
+      [
+        "./res/layout/notification_template_big_media_narrow.xml",
+        "./res/layout",
+        8
+      ],
+      [
+        "./res/layout/notification_template_part_chronometer.xml",
+        "./res/layout",
+        8
+      ],
+      ["./res/layout/abc_screen_simple.xml", "./res/layout", 8],
+      [
+        "./res/layout/select_dialog_multichoice_material.xml",
+        "./res/layout",
+        8
+      ],
+      ["./res/layout/design_layout_tab_text.xml", "./res/layout", 8],
+      ["./res/layout", "./res", 584],
+      [
+        "./res/drawable-xhdpi-v4/design_ic_visibility_off.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/common_full_open_on_phone.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_list_focused_holo.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/notification_bg_low_normal.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_post_menu_reply.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_ic_star_half_black_36dp.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      ["./res/drawable-xhdpi-v4/bs_ic_clear.png", "./res/drawable-xhdpi-v4", 8],
+      [
+        "./res/drawable-xhdpi-v4/abc_text_select_handle_middle_mtrl_dark.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/bs_ic_more_light.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_ic_star_half_black_16dp.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_video_player_replay.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_themes_organization.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_ic_star_half_black_48dp.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/node_modules_reactnativecalendars_src_calendar_img_previous.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_post_header_pin.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_text_select_handle_left_mtrl_dark.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_list_longpressed_holo.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_ic_star_black_16dp.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_text_select_handle_right_mtrl_light.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_post_header_flag.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/design_ic_visibility.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_text_select_handle_left_mtrl_light.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_post_menu_link.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_scrubber_control_off_mtrl_alpha.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_ic_star_black_48dp.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      ["./res/drawable-xhdpi-v4/bs_ic_more.png", "./res/drawable-xhdpi-v4", 8],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_themes_check.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_post_menu_emoji.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/googleg_standard_color_18.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_post_menu_flag.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_themes_mattermost_dark.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_themes_mattermost.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      ["./res/drawable-xhdpi-v4/search.png", "./res/drawable-xhdpi-v4", 8],
+      [
+        "./res/drawable-xhdpi-v4/abc_scrubber_track_mtrl_alpha.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      ["./res/drawable-xhdpi-v4/splash.png", "./res/drawable-xhdpi-v4", 32],
+      [
+        "./res/drawable-xhdpi-v4/abc_popup_background_mtrl_mult.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_video_player_fullscreen.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_post_menu_copy.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/node_modules_reactnativecalendars_src_calendar_img_next.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_thumb.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_015.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/notification_bg_normal.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_no_results_pin.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_post_menu_trash.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_post_menu_edit.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_video_player_pause.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_post_menu_pin.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_text_select_handle_middle_mtrl_light.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_themes_windows_dark.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/ic_action_name.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/node_modules_reactnavigationstack_src_views_assets_backicon.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/ic_notif_action_reply.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_video_player_play.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/bs_ic_clear_light.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/googleg_disabled_color_18.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/dist_assets_images_channel_info_pin.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_text_select_handle_right_mtrl_dark.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
+        "./res/drawable-xhdpi-v4",
+        8
+      ],
+      ["./res/drawable-xhdpi-v4", "./res", 776],
+      ["./res/color/abc_secondary_text_material_dark.xml", "./res/color", 8],
+      ["./res/color/mtrl_btn_stroke_color_selector.xml", "./res/color", 8],
+      ["./res/color/mtrl_fab_ripple_color.xml", "./res/color", 8],
+      [
+        "./res/color/abc_primary_text_disable_only_material_light.xml",
+        "./res/color",
+        8
+      ],
+      [
+        "./res/color/abc_background_cache_hint_selector_material_light.xml",
+        "./res/color",
+        8
+      ],
+      ["./res/color/common_google_signin_btn_text_dark.xml", "./res/color", 8],
+      ["./res/color/mtrl_tabs_colored_ripple_color.xml", "./res/color", 8],
+      ["./res/color/mtrl_btn_bg_color_selector.xml", "./res/color", 8],
+      ["./res/color/mtrl_btn_text_color_selector.xml", "./res/color", 8],
+      ["./res/color/switch_thumb_material_light.xml", "./res/color", 8],
+      ["./res/color/mtrl_tabs_ripple_color.xml", "./res/color", 8],
+      ["./res/color/abc_primary_text_material_dark.xml", "./res/color", 8],
+      ["./res/color/mtrl_chip_background_color.xml", "./res/color", 8],
+      ["./res/color/abc_hint_foreground_material_light.xml", "./res/color", 8],
+      ["./res/color/common_google_signin_btn_text_light.xml", "./res/color", 8],
+      ["./res/color/mtrl_bottom_nav_item_tint.xml", "./res/color", 8],
+      ["./res/color/mtrl_tabs_icon_color_selector.xml", "./res/color", 8],
+      [
+        "./res/color/mtrl_tabs_legacy_text_color_selector.xml",
+        "./res/color",
+        8
+      ],
+      ["./res/color/abc_hint_foreground_material_dark.xml", "./res/color", 8],
+      ["./res/color/switch_thumb_material_dark.xml", "./res/color", 8],
+      ["./res/color/mtrl_text_btn_text_color_selector.xml", "./res/color", 8],
+      ["./res/color/abc_primary_text_material_light.xml", "./res/color", 8],
+      ["./res/color/abc_search_url_text.xml", "./res/color", 8],
+      ["./res/color/design_error.xml", "./res/color", 8],
+      ["./res/color/mtrl_chip_ripple_color.xml", "./res/color", 8],
+      ["./res/color/mtrl_chip_close_icon_tint.xml", "./res/color", 8],
+      ["./res/color/common_google_signin_btn_tint.xml", "./res/color", 8],
+      [
+        "./res/color/mtrl_tabs_icon_color_selector_colored.xml",
+        "./res/color",
+        8
+      ],
+      ["./res/color/mtrl_bottom_nav_colored_item_tint.xml", "./res/color", 8],
+      ["./res/color/mtrl_chip_text_color.xml", "./res/color", 8],
+      [
+        "./res/color/abc_primary_text_disable_only_material_dark.xml",
+        "./res/color",
+        8
+      ],
+      ["./res/color/abc_secondary_text_material_light.xml", "./res/color", 8],
+      [
+        "./res/color/abc_background_cache_hint_selector_material_dark.xml",
+        "./res/color",
+        8
+      ],
+      ["./res/color/mtrl_btn_text_btn_ripple_color.xml", "./res/color", 8],
+      ["./res/color/mtrl_btn_ripple_color.xml", "./res/color", 8],
+      ["./res/color", "./res", 280],
+      ["./res/mipmap-mdpi-v4/ic_notification.png", "./res/mipmap-mdpi-v4", 8],
+      [
+        "./res/mipmap-mdpi-v4/ic_launcher_foreground.png",
+        "./res/mipmap-mdpi-v4",
+        16
+      ],
+      ["./res/mipmap-mdpi-v4/ic_launcher.png", "./res/mipmap-mdpi-v4", 8],
+      ["./res/mipmap-mdpi-v4/ic_launcher_round.png", "./res/mipmap-mdpi-v4", 8],
+      [
+        "./res/mipmap-mdpi-v4/ic_launcher_background.png",
+        "./res/mipmap-mdpi-v4",
+        8
+      ],
+      ["./res/mipmap-mdpi-v4", "./res", 48],
+      [
+        "./res/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "./res/layout-sw600dp-v13",
+        8
+      ],
+      [
+        "./res/layout-sw600dp-v13/mtrl_layout_snackbar.xml",
+        "./res/layout-sw600dp-v13",
+        8
+      ],
+      ["./res/layout-sw600dp-v13", "./res", 16],
+      [
+        "./res/animator-v21/design_appbar_state_list_animator.xml",
+        "./res/animator-v21",
+        8
+      ],
+      ["./res/animator-v21", "./res", 8],
+      [
+        "./res/animator/mtrl_btn_unelevated_state_list_anim.xml",
+        "./res/animator",
+        8
+      ],
+      ["./res/animator/design_fab_show_motion_spec.xml", "./res/animator", 8],
+      ["./res/animator/mtrl_fab_hide_motion_spec.xml", "./res/animator", 8],
+      ["./res/animator/mtrl_btn_state_list_anim.xml", "./res/animator", 8],
+      [
+        "./res/animator/mtrl_fab_transformation_sheet_expand_spec.xml",
+        "./res/animator",
+        8
+      ],
+      [
+        "./res/animator/mtrl_fab_transformation_sheet_collapse_spec.xml",
+        "./res/animator",
+        8
+      ],
+      ["./res/animator/mtrl_fab_show_motion_spec.xml", "./res/animator", 8],
+      ["./res/animator/design_fab_hide_motion_spec.xml", "./res/animator", 8],
+      ["./res/animator/mtrl_chip_state_list_anim.xml", "./res/animator", 8],
+      ["./res/animator", "./res", 72],
+      [
+        "./res/drawable-xxxhdpi-v4/design_ic_visibility_off.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_ic_star_half_black_48dp.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/node_modules_reactnativecalendars_src_calendar_img_previous.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_dark.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_ic_star_black_16dp.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_text_select_handle_right_mtrl_light.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/design_ic_visibility.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_light.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_ic_star_black_36dp.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      ["./res/drawable-xxxhdpi-v4/splash.png", "./res/drawable-xxxhdpi-v4", 56],
+      [
+        "./res/drawable-xxxhdpi-v4/node_modules_reactnativecalendars_src_calendar_img_next.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/node_modules_reactnavigationstack_src_views_assets_backicon.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/ic_notif_action_reply.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-xxxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png",
+        "./res/drawable-xxxhdpi-v4",
+        8
+      ],
+      ["./res/drawable-xxxhdpi-v4", "./res", 312],
+      ["./res/xml/file_provider_paths.xml", "./res/xml", 8],
+      ["./res/xml/filepaths.xml", "./res/xml", 8],
+      ["./res/xml/rn_dev_preferences.xml", "./res/xml", 8],
+      ["./res/xml/provider_paths.xml", "./res/xml", 8],
+      ["./res/xml/network_security_config.xml", "./res/xml", 8],
+      ["./res/xml/app_restrictions.xml", "./res/xml", 8],
+      ["./res/xml", "./res", 48],
+      [
+        "./res/drawable-ldrtl-xhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "./res/drawable-ldrtl-xhdpi-v17",
+        8
+      ],
+      [
+        "./res/drawable-ldrtl-xhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+        "./res/drawable-ldrtl-xhdpi-v17",
+        8
+      ],
+      [
+        "./res/drawable-ldrtl-xhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+        "./res/drawable-ldrtl-xhdpi-v17",
+        8
+      ],
+      ["./res/drawable-ldrtl-xhdpi-v17", "./res", 24],
+      ["./res/drawable-v21/avd_hide_password.xml", "./res/drawable-v21", 8],
+      [
+        "./res/drawable-v21/abc_action_bar_item_background_material.xml",
+        "./res/drawable-v21",
+        8
+      ],
+      ["./res/drawable-v21/item_background.xml", "./res/drawable-v21", 8],
+      ["./res/drawable-v21/$avd_show_password__2.xml", "./res/drawable-v21", 8],
+      ["./res/drawable-v21/design_password_eye.xml", "./res/drawable-v21", 8],
+      ["./res/drawable-v21/$avd_show_password__1.xml", "./res/drawable-v21", 8],
+      ["./res/drawable-v21/$avd_show_password__0.xml", "./res/drawable-v21", 8],
+      [
+        "./res/drawable-v21/abc_list_divider_material.xml",
+        "./res/drawable-v21",
+        8
+      ],
+      [
+        "./res/drawable-v21/notification_action_background.xml",
+        "./res/drawable-v21",
+        8
+      ],
+      ["./res/drawable-v21/bs_list_selector.xml", "./res/drawable-v21", 8],
+      [
+        "./res/drawable-v21/design_bottom_navigation_item_background.xml",
+        "./res/drawable-v21",
+        8
+      ],
+      ["./res/drawable-v21/bs_list_dark_selector.xml", "./res/drawable-v21", 8],
+      ["./res/drawable-v21/$avd_hide_password__2.xml", "./res/drawable-v21", 8],
+      ["./res/drawable-v21/$avd_hide_password__0.xml", "./res/drawable-v21", 8],
+      [
+        "./res/drawable-v21/abc_btn_colored_material.xml",
+        "./res/drawable-v21",
+        8
+      ],
+      ["./res/drawable-v21/avd_show_password.xml", "./res/drawable-v21", 8],
+      ["./res/drawable-v21/$avd_hide_password__1.xml", "./res/drawable-v21", 8],
+      [
+        "./res/drawable-v21/abc_edit_text_material.xml",
+        "./res/drawable-v21",
+        8
+      ],
+      [
+        "./res/drawable-v21/abc_dialog_material_background.xml",
+        "./res/drawable-v21",
+        8
+      ],
+      ["./res/drawable-v21", "./res", 152],
+      [
+        "./res/drawable-anydpi-v21/design_ic_visibility_off.xml",
+        "./res/drawable-anydpi-v21",
+        8
+      ],
+      [
+        "./res/drawable-anydpi-v21/design_ic_visibility.xml",
+        "./res/drawable-anydpi-v21",
+        8
+      ],
+      ["./res/drawable-anydpi-v21", "./res", 16],
+      [
+        "./res/drawable-mdpi-v4/design_ic_visibility_off.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_list_focused_holo.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/notification_bg_low_normal.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_post_menu_reply.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_ic_star_half_black_36dp.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      ["./res/drawable-mdpi-v4/bs_ic_clear.png", "./res/drawable-mdpi-v4", 8],
+      [
+        "./res/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_dark.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_status_away.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/bs_ic_more_light.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icons_youtubeplayicon.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_themes_organization.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_ic_star_half_black_48dp.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/node_modules_reactnavigationstack_src_views_assets_backiconmask.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_post_header_pin.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icons_brokenimage.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_dark.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_ic_star_black_16dp.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_light.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_post_header_flag.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/design_ic_visibility.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_light.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_post_menu_link.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icons_generic.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_logo.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_scrubber_control_off_mtrl_alpha.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_ic_star_black_48dp.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      ["./res/drawable-mdpi-v4/bs_ic_more.png", "./res/drawable-mdpi-v4", 8],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_themes_check.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_post_menu_emoji.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icons_code.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/googleg_standard_color_18.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_status_offline.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_list_pressed_holo_light.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icons_webhook.jpg",
+        "./res/drawable-mdpi-v4",
+        32
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_post_menu_flag.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_profile.jpg",
+        "./res/drawable-mdpi-v4",
+        16
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_themes_mattermost_dark.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_themes_mattermost.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_ic_star_black_36dp.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      ["./res/drawable-mdpi-v4/search.png", "./res/drawable-mdpi-v4", 8],
+      [
+        "./res/drawable-mdpi-v4/abc_scrubber_track_mtrl_alpha.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      ["./res/drawable-mdpi-v4/splash.png", "./res/drawable-mdpi-v4", 8],
+      [
+        "./res/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icons_patch.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_post_menu_copy.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icons_excel.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icons_reaction.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icons_word.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_list_selector_disabled_holo_light.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_gitlab.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_thumb.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/notification_bg_normal.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_status_away_avatar.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_list_divider_mtrl_alpha.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_no_results_pin.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icons_video.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_post_menu_trash.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_post_menu_edit.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_status_online.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icons_audio.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_post_menu_pin.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_light.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_themes_windows_dark.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/ic_action_name.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/node_modules_reactnavigationstack_src_views_assets_backicon.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_status_online_avatar.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icon.png",
+        "./res/drawable-mdpi-v4",
+        24
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/notification_bg_low_pressed.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icons_pdf.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icons_ppt.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/ic_notif_action_reply.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_status_dnd_avatar.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/bs_ic_clear_light.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/googleg_disabled_color_18.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_status_offline_avatar.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_icons_image.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_channel_info_pin.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/dist_assets_images_status_dnd.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_dark.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
+        "./res/drawable-mdpi-v4",
+        8
+      ],
+      ["./res/drawable-mdpi-v4", "./res", 960],
+      ["./res/layout-v26/abc_screen_toolbar.xml", "./res/layout-v26", 8],
+      ["./res/layout-v26", "./res", 8],
+      ["./res/layout-v21/bottom_navigation_item.xml", "./res/layout-v21", 8],
+      [
+        "./res/layout-v21/notification_template_icon_group.xml",
+        "./res/layout-v21",
+        8
+      ],
+      [
+        "./res/layout-v21/notification_action_tombstone.xml",
+        "./res/layout-v21",
+        8
+      ],
+      ["./res/layout-v21/notification_action.xml", "./res/layout-v21", 8],
+      [
+        "./res/layout-v21/bottom_navigation_small_item.xml",
+        "./res/layout-v21",
+        8
+      ],
+      [
+        "./res/layout-v21/notification_template_custom_big.xml",
+        "./res/layout-v21",
+        8
+      ],
+      ["./res/layout-v21", "./res", 48],
+      ["./res/menu/stub.xml", "./res/menu", 8],
+      ["./res/menu/search_item.xml", "./res/menu", 8],
+      ["./res/menu", "./res", 16],
+      [
+        "./res/drawable-watch-v20/abc_dialog_material_background.xml",
+        "./res/drawable-watch-v20",
+        8
+      ],
+      ["./res/drawable-watch-v20", "./res", 8],
+      [
+        "./res/mipmap-xxhdpi-v4/ic_notification.png",
+        "./res/mipmap-xxhdpi-v4",
+        8
+      ],
+      [
+        "./res/mipmap-xxhdpi-v4/ic_launcher_foreground.png",
+        "./res/mipmap-xxhdpi-v4",
+        16
+      ],
+      ["./res/mipmap-xxhdpi-v4/ic_launcher.png", "./res/mipmap-xxhdpi-v4", 32],
+      [
+        "./res/mipmap-xxhdpi-v4/ic_launcher_round.png",
+        "./res/mipmap-xxhdpi-v4",
+        40
+      ],
+      [
+        "./res/mipmap-xxhdpi-v4/ic_launcher_background.png",
+        "./res/mipmap-xxhdpi-v4",
+        8
+      ],
+      ["./res/mipmap-xxhdpi-v4", "./res", 104],
+      ["./res/anim-v21/design_bottom_sheet_slide_in.xml", "./res/anim-v21", 8],
+      ["./res/anim-v21/design_bottom_sheet_slide_out.xml", "./res/anim-v21", 8],
+      ["./res/anim-v21/bs_list_item_in.xml", "./res/anim-v21", 8],
+      ["./res/anim-v21/bs_list_layout_anim_in.xml", "./res/anim-v21", 8],
+      ["./res/anim-v21", "./res", 32],
+      [
+        "./res/drawable-hdpi-v4/design_ic_visibility_off.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/common_full_open_on_phone.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_list_focused_holo.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/notification_bg_low_normal.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      ["./res/drawable-hdpi-v4/bs_ic_clear.png", "./res/drawable-hdpi-v4", 8],
+      [
+        "./res/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_dark.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/bs_ic_more_light.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/node_modules_reactnativecalendars_src_calendar_img_previous.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_cab_background_top_mtrl_alpha.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_dark.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_ic_star_black_16dp.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_light.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/design_ic_visibility.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_light.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_scrubber_control_off_mtrl_alpha.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_ic_star_black_48dp.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      ["./res/drawable-hdpi-v4/bs_ic_more.png", "./res/drawable-hdpi-v4", 8],
+      [
+        "./res/drawable-hdpi-v4/googleg_standard_color_18.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_ic_star_black_36dp.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      ["./res/drawable-hdpi-v4/search.png", "./res/drawable-hdpi-v4", 8],
+      [
+        "./res/drawable-hdpi-v4/abc_scrubber_track_mtrl_alpha.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      ["./res/drawable-hdpi-v4/splash.png", "./res/drawable-hdpi-v4", 16],
+      [
+        "./res/drawable-hdpi-v4/abc_popup_background_mtrl_mult.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_list_selector_disabled_holo_light.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/node_modules_reactnativecalendars_src_calendar_img_next.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/notification_bg_normal.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_list_divider_mtrl_alpha.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_textfield_search_activated_mtrl_alpha.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_light.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/ic_action_name.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/node_modules_reactnavigationstack_src_views_assets_backicon.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/notification_bg_low_pressed.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/ic_notif_action_reply.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/bs_ic_clear_light.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/googleg_disabled_color_18.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_dark.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      [
+        "./res/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
+        "./res/drawable-hdpi-v4",
+        8
+      ],
+      ["./res/drawable-hdpi-v4", "./res", 584],
+      [
+        "./res/interpolator-v21/mtrl_fast_out_slow_in.xml",
+        "./res/interpolator-v21",
+        8
+      ],
+      [
+        "./res/interpolator-v21/mtrl_fast_out_linear_in.xml",
+        "./res/interpolator-v21",
+        8
+      ],
+      [
+        "./res/interpolator-v21/mtrl_linear_out_slow_in.xml",
+        "./res/interpolator-v21",
+        8
+      ],
+      ["./res/interpolator-v21", "./res", 24],
+      ["./res/raw/dist_assets_i18n_es.json", "./res/raw", 88],
+      ["./res/raw/node_modules_entities_maps_entities.json", "./res/raw", 80],
+      [
+        "./res/raw/node_modules_reactnativevectoricons_glyphmaps_fontawesome.json",
+        "./res/raw",
+        40
+      ],
+      ["./res/raw/dist_assets_i18n_ro.json", "./res/raw", 88],
+      ["./res/raw/dist_assets_i18n_ko.json", "./res/raw", 88],
+      ["./res/raw/node_modules_entities_maps_legacy.json", "./res/raw", 8],
+      [
+        "./res/raw/node_modules_reactnativevectoricons_glyphmaps_foundation.json",
+        "./res/raw",
+        16
+      ],
+      ["./res/raw/node_modules_entities_maps_xml.json", "./res/raw", 8],
+      ["./res/raw/dist_assets_i18n_fr.json", "./res/raw", 88],
+      ["./res/raw/dist_assets_i18n_zhcn.json", "./res/raw", 80],
+      ["./res/raw/dist_assets_i18n_en.json", "./res/raw", 80],
+      [
+        "./res/raw/node_modules_mattermostredux_node_modules_momenttimezone_data_packed_latest.json",
+        "./res/raw",
+        1816
+      ],
+      [
+        "./res/raw/node_modules_mattermostredux_node_modules_mimedb_db.json",
+        "./res/raw",
+        336
+      ],
+      ["./res/raw/dist_assets_i18n_it.json", "./res/raw", 88],
+      ["./res/raw/dist_assets_i18n_zhtw.json", "./res/raw", 80],
+      ["./res/raw/dist_assets_i18n_de.json", "./res/raw", 88],
+      ["./res/raw/node_modules_entities_maps_decode.json", "./res/raw", 8],
+      ["./res/raw/dist_assets_i18n_pl.json", "./res/raw", 88],
+      ["./res/raw/dist_assets_config.json", "./res/raw", 8],
+      ["./res/raw/dist_assets_i18n_ru.json", "./res/raw", 112],
+      ["./res/raw/dist_assets_i18n_uk.json", "./res/raw", 112],
+      ["./res/raw/dist_assets_i18n_ptbr.json", "./res/raw", 88],
+      ["./res/raw/node_modules_mimedb_db.json", "./res/raw", 336],
+      ["./res/raw/dist_assets_i18n_nl.json", "./res/raw", 80],
+      [
+        "./res/raw/node_modules_reactnativevectoricons_glyphmaps_fontawesome5free_meta.json",
+        "./res/raw",
+        56
+      ],
+      [
+        "./res/raw/node_modules_reactnativevectoricons_glyphmaps_materialicons.json",
+        "./res/raw",
+        48
+      ],
+      ["./res/raw/dist_assets_i18n_ja.json", "./res/raw", 96],
+      ["./res/raw/dist_assets_i18n_tr.json", "./res/raw", 88],
+      [
+        "./res/raw/node_modules_reactnativevectoricons_glyphmaps_ionicons.json",
+        "./res/raw",
+        40
+      ],
+      [
+        "./res/raw/node_modules_momenttimezone_data_packed_latest.json",
+        "./res/raw",
+        1816
+      ],
+      [
+        "./res/raw/node_modules_reactnativevectoricons_glyphmaps_fontawesome5free.json",
+        "./res/raw",
+        64
+      ],
+      ["./res/raw", "./res", 6112],
+      [
+        "./res/drawable-ldrtl-hdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "./res/drawable-ldrtl-hdpi-v17",
+        8
+      ],
+      [
+        "./res/drawable-ldrtl-hdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+        "./res/drawable-ldrtl-hdpi-v17",
+        8
+      ],
+      [
+        "./res/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+        "./res/drawable-ldrtl-hdpi-v17",
+        8
+      ],
+      ["./res/drawable-ldrtl-hdpi-v17", "./res", 24],
+      ["./res/mipmap-anydpi-v26/ic_launcher.xml", "./res/mipmap-anydpi-v26", 8],
+      [
+        "./res/mipmap-anydpi-v26/ic_launcher_round.xml",
+        "./res/mipmap-anydpi-v26",
+        8
+      ],
+      ["./res/mipmap-anydpi-v26", "./res", 16],
+      ["./res", ".", 12176],
+      ["./firebase-measurement-connector.properties", ".", 8],
+      ["./play-services-gcm.properties", ".", 8],
+      ["./firebase-iid-interop.properties", ".", 8],
+      ["./firebase-messaging.properties", ".", 8],
+      ["./AndroidManifest.xml", ".", 40],
+      ["./play-services-iid.properties", ".", 8],
+      ["./kotlin/ExperimentalMultiplatform.kotlin_metadata", "./kotlin", 8],
+      [
+        "./kotlin/ranges/ClosedFloatingPointRange.kotlin_metadata",
+        "./kotlin/ranges",
+        8
+      ],
+      [
+        "./kotlin/ranges/ClosedDoubleRange.kotlin_metadata",
+        "./kotlin/ranges",
+        8
+      ],
+      [
+        "./kotlin/ranges/ULongProgression.kotlin_metadata",
+        "./kotlin/ranges",
+        8
+      ],
+      ["./kotlin/ranges/ComparableRange.kotlin_metadata", "./kotlin/ranges", 8],
+      [
+        "./kotlin/ranges/ULongProgressionIterator.kotlin_metadata",
+        "./kotlin/ranges",
+        8
+      ],
+      [
+        "./kotlin/ranges/UIntProgressionIterator.kotlin_metadata",
+        "./kotlin/ranges",
+        8
+      ],
+      ["./kotlin/ranges/RangesKt.kotlin_metadata", "./kotlin/ranges", 8],
+      ["./kotlin/ranges/ULongRange.kotlin_metadata", "./kotlin/ranges", 8],
+      ["./kotlin/ranges/ranges.kotlin_builtins", "./kotlin/ranges", 8],
+      ["./kotlin/ranges/UIntProgression.kotlin_metadata", "./kotlin/ranges", 8],
+      ["./kotlin/ranges/UIntRange.kotlin_metadata", "./kotlin/ranges", 8],
+      ["./kotlin/ranges", "./kotlin", 88],
+      [
+        "./kotlin/UninitializedPropertyAccessException.kotlin_metadata",
+        "./kotlin",
+        8
+      ],
+      ["./kotlin/Comparator.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/UIntKt.kotlin_metadata", "./kotlin", 8],
+      [
+        "./kotlin/experimental/ExperimentalTypeInference.kotlin_metadata",
+        "./kotlin/experimental",
+        8
+      ],
+      [
+        "./kotlin/experimental/BitwiseOperationsKt.kotlin_metadata",
+        "./kotlin/experimental",
+        8
+      ],
+      ["./kotlin/experimental", "./kotlin", 16],
+      ["./kotlin/Error.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/LateinitKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/ClassCastException.kotlin_metadata", "./kotlin", 8],
+      [
+        "./kotlin/comparisons/ComparisonsKt.kotlin_metadata",
+        "./kotlin/comparisons",
+        8
+      ],
+      [
+        "./kotlin/comparisons/ReverseOrderComparator.kotlin_metadata",
+        "./kotlin/comparisons",
+        8
+      ],
+      [
+        "./kotlin/comparisons/NaturalOrderComparator.kotlin_metadata",
+        "./kotlin/comparisons",
+        8
+      ],
+      [
+        "./kotlin/comparisons/ReversedComparator.kotlin_metadata",
+        "./kotlin/comparisons",
+        8
+      ],
+      ["./kotlin/comparisons", "./kotlin", 32],
+      ["./kotlin/LazyKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/NullPointerException.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/WasExperimental.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/SuccessOrFailureKt.kotlin_metadata", "./kotlin", 8],
+      [
+        "./kotlin/ConcurrentModificationException.kotlin_metadata",
+        "./kotlin",
+        8
+      ],
+      ["./kotlin/TuplesKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/PreconditionsKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/UShortArray.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/HashCodeKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/KotlinVersion.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/NumberFormatException.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/UShortArrayKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/js/JsName.kotlin_metadata", "./kotlin/js", 8],
+      ["./kotlin/js", "./kotlin", 8],
+      ["./kotlin/NoSuchElementException.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/Experimental.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/UByteKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/ExperimentalUnsignedTypes.kotlin_metadata", "./kotlin", 8],
+      [
+        "./kotlin/contracts/ContractBuilder.kotlin_metadata",
+        "./kotlin/contracts",
+        8
+      ],
+      ["./kotlin/contracts/Effect.kotlin_metadata", "./kotlin/contracts", 8],
+      ["./kotlin/contracts/Returns.kotlin_metadata", "./kotlin/contracts", 8],
+      [
+        "./kotlin/contracts/ConditionalEffect.kotlin_metadata",
+        "./kotlin/contracts",
+        8
+      ],
+      [
+        "./kotlin/contracts/ExperimentalContracts.kotlin_metadata",
+        "./kotlin/contracts",
+        8
+      ],
+      [
+        "./kotlin/contracts/ReturnsNotNull.kotlin_metadata",
+        "./kotlin/contracts",
+        8
+      ],
+      [
+        "./kotlin/contracts/CallsInPlace.kotlin_metadata",
+        "./kotlin/contracts",
+        8
+      ],
+      [
+        "./kotlin/contracts/ContractBuilderKt.kotlin_metadata",
+        "./kotlin/contracts",
+        8
+      ],
+      [
+        "./kotlin/contracts/InvocationKind.kotlin_metadata",
+        "./kotlin/contracts",
+        8
+      ],
+      [
+        "./kotlin/contracts/SimpleEffect.kotlin_metadata",
+        "./kotlin/contracts",
+        8
+      ],
+      ["./kotlin/contracts", "./kotlin", 80],
+      ["./kotlin/UInt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/NoWhenBranchMatchedException.kotlin_metadata", "./kotlin", 8],
+      [
+        "./kotlin/reflect/KMutableProperty1.kotlin_metadata",
+        "./kotlin/reflect",
+        8
+      ],
+      ["./kotlin/reflect/KProperty2.kotlin_metadata", "./kotlin/reflect", 8],
+      [
+        "./kotlin/reflect/KMutableProperty.kotlin_metadata",
+        "./kotlin/reflect",
+        8
+      ],
+      ["./kotlin/reflect/KCallable.kotlin_metadata", "./kotlin/reflect", 8],
+      [
+        "./kotlin/reflect/KMutableProperty0.kotlin_metadata",
+        "./kotlin/reflect",
+        8
+      ],
+      ["./kotlin/reflect/KProperty1.kotlin_metadata", "./kotlin/reflect", 8],
+      [
+        "./kotlin/reflect/KMutableProperty2.kotlin_metadata",
+        "./kotlin/reflect",
+        8
+      ],
+      ["./kotlin/reflect/KClass.kotlin_metadata", "./kotlin/reflect", 8],
+      ["./kotlin/reflect/KProperty0.kotlin_metadata", "./kotlin/reflect", 8],
+      ["./kotlin/reflect/reflect.kotlin_builtins", "./kotlin/reflect", 16],
+      ["./kotlin/reflect/KProperty.kotlin_metadata", "./kotlin/reflect", 8],
+      ["./kotlin/reflect", "./kotlin", 96],
+      ["./kotlin/io/IoHKt.kotlin_metadata", "./kotlin/io", 8],
+      ["./kotlin/io/Serializable.kotlin_metadata", "./kotlin/io", 8],
+      ["./kotlin/io", "./kotlin", 16],
+      ["./kotlin/StandardKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/KotlinHKt.kotlin_metadata", "./kotlin", 8],
+      [
+        "./kotlin/internal/OnlyInputTypes.kotlin_metadata",
+        "./kotlin/internal",
+        8
+      ],
+      [
+        "./kotlin/internal/LowPriorityInOverloadResolution.kotlin_metadata",
+        "./kotlin/internal",
+        8
+      ],
+      ["./kotlin/internal/InlineOnly.kotlin_metadata", "./kotlin/internal", 8],
+      [
+        "./kotlin/internal/RequireKotlin.kotlin_metadata",
+        "./kotlin/internal",
+        8
+      ],
+      ["./kotlin/internal/NoInfer.kotlin_metadata", "./kotlin/internal", 8],
+      [
+        "./kotlin/internal/RequireKotlinVersionKind.kotlin_metadata",
+        "./kotlin/internal",
+        8
+      ],
+      [
+        "./kotlin/internal/UProgressionUtilKt.kotlin_metadata",
+        "./kotlin/internal",
+        8
+      ],
+      [
+        "./kotlin/internal/ContractsDsl.kotlin_metadata",
+        "./kotlin/internal",
+        8
+      ],
+      [
+        "./kotlin/internal/DynamicExtension.kotlin_metadata",
+        "./kotlin/internal",
+        8
+      ],
+      [
+        "./kotlin/internal/AccessibleLateinitPropertyLiteral.kotlin_metadata",
+        "./kotlin/internal",
+        8
+      ],
+      ["./kotlin/internal/Exact.kotlin_metadata", "./kotlin/internal", 8],
+      [
+        "./kotlin/internal/HidesMembers.kotlin_metadata",
+        "./kotlin/internal",
+        8
+      ],
+      ["./kotlin/internal/internal.kotlin_builtins", "./kotlin/internal", 8],
+      ["./kotlin/internal", "./kotlin", 104],
+      ["./kotlin/jvm/Volatile.kotlin_metadata", "./kotlin/jvm", 8],
+      ["./kotlin/jvm/JvmSuppressWildcards.kotlin_metadata", "./kotlin/jvm", 8],
+      ["./kotlin/jvm/JvmName.kotlin_metadata", "./kotlin/jvm", 8],
+      ["./kotlin/jvm/Strictfp.kotlin_metadata", "./kotlin/jvm", 8],
+      ["./kotlin/jvm/JvmMultifileClass.kotlin_metadata", "./kotlin/jvm", 8],
+      ["./kotlin/jvm/JvmWildcard.kotlin_metadata", "./kotlin/jvm", 8],
+      ["./kotlin/jvm/JvmOverloads.kotlin_metadata", "./kotlin/jvm", 8],
+      ["./kotlin/jvm/JvmField.kotlin_metadata", "./kotlin/jvm", 8],
+      ["./kotlin/jvm/Synchronized.kotlin_metadata", "./kotlin/jvm", 8],
+      ["./kotlin/jvm/JvmStatic.kotlin_metadata", "./kotlin/jvm", 8],
+      ["./kotlin/jvm/Transient.kotlin_metadata", "./kotlin/jvm", 8],
+      ["./kotlin/jvm/JvmSynthetic.kotlin_metadata", "./kotlin/jvm", 8],
+      ["./kotlin/jvm", "./kotlin", 96],
+      ["./kotlin/Lazy.kotlin_metadata", "./kotlin", 8],
+      [
+        "./kotlin/annotation/annotation.kotlin_builtins",
+        "./kotlin/annotation",
+        8
+      ],
+      ["./kotlin/annotation", "./kotlin", 8],
+      ["./kotlin/AssertionError.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/kotlin.kotlin_builtins", "./kotlin", 32],
+      ["./kotlin/OptionalExpectation.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/math/MathHKt.kotlin_metadata", "./kotlin/math", 8],
+      ["./kotlin/math", "./kotlin", 8],
+      ["./kotlin/Pair.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/ULongKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/ArithmeticException.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/UShort.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/IllegalStateException.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/Result.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/ULong.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/ResultKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/Exception.kotlin_metadata", "./kotlin", 8],
+      [
+        "./kotlin/properties/ReadWriteProperty.kotlin_metadata",
+        "./kotlin/properties",
+        8
+      ],
+      [
+        "./kotlin/properties/NotNullVar.kotlin_metadata",
+        "./kotlin/properties",
+        8
+      ],
+      [
+        "./kotlin/properties/ObservableProperty.kotlin_metadata",
+        "./kotlin/properties",
+        8
+      ],
+      [
+        "./kotlin/properties/Delegates.kotlin_metadata",
+        "./kotlin/properties",
+        8
+      ],
+      [
+        "./kotlin/properties/ReadOnlyProperty.kotlin_metadata",
+        "./kotlin/properties",
+        8
+      ],
+      ["./kotlin/properties", "./kotlin", 40],
+      ["./kotlin/UnsupportedOperationException.kotlin_metadata", "./kotlin", 8],
+      [
+        "./kotlin/sequences/SequencesKt.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/IndexingSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/GeneratorSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/DistinctSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/MergingSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/DistinctIterator.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/SequenceBuilderKt.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/DropTakeSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/SequenceScope.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/TakeWhileSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/ConstrainedOnceSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/FilteringSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      ["./kotlin/sequences/Sequence.kotlin_metadata", "./kotlin/sequences", 8],
+      [
+        "./kotlin/sequences/EmptySequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/TransformingSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/DropWhileSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/TransformingIndexedSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/DropSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/SequenceBuilderIterator.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/TakeSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/SubSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      [
+        "./kotlin/sequences/FlatteningSequence.kotlin_metadata",
+        "./kotlin/sequences",
+        8
+      ],
+      ["./kotlin/sequences", "./kotlin", 176],
+      ["./kotlin/IllegalArgumentException.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/UnsafeLazyImpl.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/NotImplementedError.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/UByteArray.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/UByteArrayKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/BuilderInference.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/UShortKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/UNINITIALIZED_VALUE.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/UseExperimental.kotlin_metadata", "./kotlin", 8],
+      [
+        "./kotlin/coroutines/ContinuationInterceptor.kotlin_metadata",
+        "./kotlin/coroutines",
+        8
+      ],
+      [
+        "./kotlin/coroutines/experimental/ContinuationInterceptor.kotlin_metadata",
+        "./kotlin/coroutines/experimental",
+        8
+      ],
+      [
+        "./kotlin/coroutines/experimental/AbstractCoroutineContextElement.kotlin_metadata",
+        "./kotlin/coroutines/experimental",
+        8
+      ],
+      [
+        "./kotlin/coroutines/experimental/SequenceBuilderKt.kotlin_metadata",
+        "./kotlin/coroutines/experimental",
+        8
+      ],
+      [
+        "./kotlin/coroutines/experimental/EmptyCoroutineContext.kotlin_metadata",
+        "./kotlin/coroutines/experimental",
+        8
+      ],
+      [
+        "./kotlin/coroutines/experimental/SequenceBuilder.kotlin_metadata",
+        "./kotlin/coroutines/experimental",
+        8
+      ],
+      [
+        "./kotlin/coroutines/experimental/Continuation.kotlin_metadata",
+        "./kotlin/coroutines/experimental",
+        8
+      ],
+      [
+        "./kotlin/coroutines/experimental/CoroutinesLibraryKt.kotlin_metadata",
+        "./kotlin/coroutines/experimental",
+        8
+      ],
+      [
+        "./kotlin/coroutines/experimental/CombinedContext.kotlin_metadata",
+        "./kotlin/coroutines/experimental",
+        8
+      ],
+      [
+        "./kotlin/coroutines/experimental/CoroutineContext.kotlin_metadata",
+        "./kotlin/coroutines/experimental",
+        8
+      ],
+      [
+        "./kotlin/coroutines/experimental/intrinsics/CoroutinesIntrinsicsExperimentalHKt.kotlin_metadata",
+        "./kotlin/coroutines/experimental/intrinsics",
+        8
+      ],
+      [
+        "./kotlin/coroutines/experimental/intrinsics/IntrinsicsKt.kotlin_metadata",
+        "./kotlin/coroutines/experimental/intrinsics",
+        8
+      ],
+      [
+        "./kotlin/coroutines/experimental/intrinsics",
+        "./kotlin/coroutines/experimental",
+        16
+      ],
+      [
+        "./kotlin/coroutines/experimental/RestrictsSuspension.kotlin_metadata",
+        "./kotlin/coroutines/experimental",
+        8
+      ],
+      [
+        "./kotlin/coroutines/experimental/SafeContinuation.kotlin_metadata",
+        "./kotlin/coroutines/experimental",
+        8
+      ],
+      [
+        "./kotlin/coroutines/experimental/SequenceBuilderIterator.kotlin_metadata",
+        "./kotlin/coroutines/experimental",
+        8
+      ],
+      ["./kotlin/coroutines/experimental", "./kotlin/coroutines", 112],
+      [
+        "./kotlin/coroutines/AbstractCoroutineContextElement.kotlin_metadata",
+        "./kotlin/coroutines",
+        8
+      ],
+      [
+        "./kotlin/coroutines/EmptyCoroutineContext.kotlin_metadata",
+        "./kotlin/coroutines",
+        8
+      ],
+      [
+        "./kotlin/coroutines/ContinuationKt.kotlin_metadata",
+        "./kotlin/coroutines",
+        8
+      ],
+      [
+        "./kotlin/coroutines/Continuation.kotlin_metadata",
+        "./kotlin/coroutines",
+        8
+      ],
+      [
+        "./kotlin/coroutines/coroutines.kotlin_builtins",
+        "./kotlin/coroutines",
+        8
+      ],
+      [
+        "./kotlin/coroutines/CombinedContext.kotlin_metadata",
+        "./kotlin/coroutines",
+        8
+      ],
+      [
+        "./kotlin/coroutines/CoroutineContext.kotlin_metadata",
+        "./kotlin/coroutines",
+        8
+      ],
+      [
+        "./kotlin/coroutines/intrinsics/CoroutineSingletons.kotlin_metadata",
+        "./kotlin/coroutines/intrinsics",
+        8
+      ],
+      [
+        "./kotlin/coroutines/intrinsics/IntrinsicsKt.kotlin_metadata",
+        "./kotlin/coroutines/intrinsics",
+        8
+      ],
+      [
+        "./kotlin/coroutines/intrinsics/CoroutinesIntrinsicsHKt.kotlin_metadata",
+        "./kotlin/coroutines/intrinsics",
+        8
+      ],
+      ["./kotlin/coroutines/intrinsics", "./kotlin/coroutines", 24],
+      [
+        "./kotlin/coroutines/RestrictsSuspension.kotlin_metadata",
+        "./kotlin/coroutines",
+        8
+      ],
+      [
+        "./kotlin/coroutines/SafeContinuation.kotlin_metadata",
+        "./kotlin/coroutines",
+        8
+      ],
+      ["./kotlin/coroutines", "./kotlin", 216],
+      ["./kotlin/text/MatchResult.kotlin_metadata", "./kotlin/text", 8],
+      ["./kotlin/text/Regex.kotlin_metadata", "./kotlin/text", 8],
+      ["./kotlin/text/MatchGroup.kotlin_metadata", "./kotlin/text", 8],
+      ["./kotlin/text/CharKt.kotlin_metadata", "./kotlin/text", 8],
+      ["./kotlin/text/UStringsKt.kotlin_metadata", "./kotlin/text", 8],
+      ["./kotlin/text/RegexOption.kotlin_metadata", "./kotlin/text", 8],
+      ["./kotlin/text/StringBuilderKt.kotlin_metadata", "./kotlin/text", 8],
+      ["./kotlin/text/Appendable.kotlin_metadata", "./kotlin/text", 8],
+      [
+        "./kotlin/text/StringNumberConversionsKt.kotlin_metadata",
+        "./kotlin/text",
+        8
+      ],
+      ["./kotlin/text/StringsKt.kotlin_metadata", "./kotlin/text", 16],
+      ["./kotlin/text/Typography.kotlin_metadata", "./kotlin/text", 8],
+      [
+        "./kotlin/text/MatchGroupCollection.kotlin_metadata",
+        "./kotlin/text",
+        8
+      ],
+      [
+        "./kotlin/text/MatchNamedGroupCollection.kotlin_metadata",
+        "./kotlin/text",
+        8
+      ],
+      ["./kotlin/text/TextHKt.kotlin_metadata", "./kotlin/text", 8],
+      [
+        "./kotlin/text/DelimitedRangesSequence.kotlin_metadata",
+        "./kotlin/text",
+        8
+      ],
+      ["./kotlin/text/RegexExtensionsKt.kotlin_metadata", "./kotlin/text", 8],
+      ["./kotlin/text/StringBuilder.kotlin_metadata", "./kotlin/text", 8],
+      ["./kotlin/text/IndentKt.kotlin_metadata", "./kotlin/text", 8],
+      ["./kotlin/text", "./kotlin", 152],
+      ["./kotlin/UnsignedUtilsKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/random/RandomKt.kotlin_metadata", "./kotlin/random", 8],
+      ["./kotlin/random/URandomKt.kotlin_metadata", "./kotlin/random", 8],
+      ["./kotlin/random/XorWowRandom.kotlin_metadata", "./kotlin/random", 8],
+      ["./kotlin/random/Random.kotlin_metadata", "./kotlin/random", 8],
+      ["./kotlin/random", "./kotlin", 32],
+      ["./kotlin/UByte.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/IndexOutOfBoundsException.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/Triple.kotlin_metadata", "./kotlin", 8],
+      [
+        "./kotlin/collections/ULongIterator.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/AbstractIterator.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/AbstractList.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/EmptyList.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/LinkedHashMap.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/RingBuffer.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/EmptySet.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/MapWithDefaultKt.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/IndexingIterator.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/CollectionsKt.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/AbstractMap.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/MutableMapWithDefaultImpl.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/MapAccessorsKt.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/collections.kotlin_builtins",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/IndexedValue.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/MapsKt.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      ["./kotlin/collections/State.kotlin_metadata", "./kotlin/collections", 8],
+      [
+        "./kotlin/collections/IteratorsKt.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/AbstractMutableMap.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/HashSet.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/ReversedList.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/ArrayAsCollection.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/CollectionsHKt.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/Grouping.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/UByteIterator.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/AbstractSet.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/ReversedListReadOnly.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/MapWithDefault.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/RandomAccess.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/MapWithDefaultImpl.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/MutableCollectionsKt.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/EmptyIterator.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/ArraysKt.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/ArrayList.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/LinkedHashSet.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/EmptyMap.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/SetsKt.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/MovingSubList.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/AbstractMutableList.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/ReversedViewsKt.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/MutableMapWithDefault.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/AbstractMutableSet.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/UIntIterator.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/HashMap.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/UShortIterator.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/IndexingIterable.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/AbstractCollection.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/GroupingKt.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/IterablesKt.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      [
+        "./kotlin/collections/SlidingWindowKt.kotlin_metadata",
+        "./kotlin/collections",
+        8
+      ],
+      ["./kotlin/collections", "./kotlin", 400],
+      ["./kotlin/UIntArray.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/SuspendKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/InitializedLazyImpl.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/ULongArrayKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/UIntArrayKt.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/ULongArray.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/RuntimeException.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin/LazyThreadSafetyMode.kotlin_metadata", "./kotlin", 8],
+      ["./kotlin", ".", 2088],
+      [
+        "./META-INF/androidx.versionedparcelable_versionedparcelable.version",
+        "./META-INF",
+        8
+      ],
+      ["./META-INF/androidx.transition_transition.version", "./META-INF", 8],
+      [
+        "./META-INF/androidx.coordinatorlayout_coordinatorlayout.version",
+        "./META-INF",
+        8
+      ],
+      ["./META-INF/MANIFEST.MF", "./META-INF", 280],
+      ["./META-INF/kotlin-stdlib-common.kotlin_module", "./META-INF", 8],
+      ["./META-INF/androidx.media_media.version", "./META-INF", 8],
+      ["./META-INF/CERT.SF", "./META-INF", 280],
+      ["./META-INF/kotlin-stdlib_coroutines.kotlin_module", "./META-INF", 8],
+      ["./META-INF/androidx.legacy_legacy-support-v4.version", "./META-INF", 8],
+      [
+        "./META-INF/androidx.lifecycle_lifecycle-runtime.version",
+        "./META-INF",
+        8
+      ],
+      [
+        "./META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version",
+        "./META-INF",
+        8
+      ],
+      ["./META-INF/androidx.fragment_fragment.version", "./META-INF", 8],
+      [
+        "./META-INF/androidx.legacy_legacy-support-core-utils.version",
+        "./META-INF",
+        8
+      ],
+      ["./META-INF/CERT.RSA", "./META-INF", 8],
+      ["./META-INF/androidx.print_print.version", "./META-INF", 8],
+      [
+        "./META-INF/androidx.recyclerview_recyclerview.version",
+        "./META-INF",
+        8
+      ],
+      [
+        "./META-INF/react-native-webview_release.kotlin_module",
+        "./META-INF",
+        8
+      ],
+      ["./META-INF/android.support.design_material.version", "./META-INF", 8],
+      [
+        "./META-INF/androidx.lifecycle_lifecycle-livedata-core.version",
+        "./META-INF",
+        8
+      ],
+      [
+        "./META-INF/androidx.cursoradapter_cursoradapter.version",
+        "./META-INF",
+        8
+      ],
+      [
+        "./META-INF/androidx.vectordrawable_vectordrawable.version",
+        "./META-INF",
+        8
+      ],
+      ["./META-INF/kotlin-stdlib.kotlin_module", "./META-INF", 8],
+      [
+        "./META-INF/androidx.asynclayoutinflater_asynclayoutinflater.version",
+        "./META-INF",
+        8
+      ],
+      [
+        "./META-INF/kotlin-stdlib-common-coroutines.kotlin_module",
+        "./META-INF",
+        8
+      ],
+      [
+        "./META-INF/com.google.android.material_material.version",
+        "./META-INF",
+        8
+      ],
+      [
+        "./META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version",
+        "./META-INF",
+        8
+      ],
+      [
+        "./META-INF/androidx.interpolator_interpolator.version",
+        "./META-INF",
+        8
+      ],
+      [
+        "./META-INF/androidx.vectordrawable_vectordrawable-animated.version",
+        "./META-INF",
+        8
+      ],
+      [
+        "./META-INF/androidx.legacy_legacy-support-core-ui.version",
+        "./META-INF",
+        8
+      ],
+      [
+        "./META-INF/androidx.lifecycle_lifecycle-livedata.version",
+        "./META-INF",
+        8
+      ],
+      [
+        "./META-INF/androidx.slidingpanelayout_slidingpanelayout.version",
+        "./META-INF",
+        8
+      ],
+      ["./META-INF/androidx.viewpager_viewpager.version", "./META-INF", 8],
+      ["./META-INF/androidx.cardview_cardview.version", "./META-INF", 8],
+      ["./META-INF/androidx.arch.core_core-runtime.version", "./META-INF", 8],
+      ["./META-INF/web-fragment.xml", "./META-INF", 8],
+      ["./META-INF/androidx.appcompat_appcompat.version", "./META-INF", 8],
+      [
+        "./META-INF/androidx.documentfile_documentfile.version",
+        "./META-INF",
+        8
+      ],
+      [
+        "./META-INF/androidx.lifecycle_lifecycle-viewmodel.version",
+        "./META-INF",
+        8
+      ],
+      ["./META-INF/androidx.customview_customview.version", "./META-INF", 8],
+      ["./META-INF/androidx.core_core.version", "./META-INF", 8],
+      [
+        "./META-INF/androidx.drawerlayout_drawerlayout.version",
+        "./META-INF",
+        8
+      ],
+      ["./META-INF/androidx.loader_loader.version", "./META-INF", 8],
+      [
+        "./META-INF/androidx.percentlayout_percentlayout.version",
+        "./META-INF",
+        8
+      ],
+      [
+        "./META-INF/services/javax.servlet.ServletContainerInitializer",
+        "./META-INF/services",
+        8
+      ],
+      [
+        "./META-INF/services/com.fasterxml.jackson.core.JsonFactory",
+        "./META-INF/services",
+        8
+      ],
+      ["./META-INF/services", "./META-INF", 16],
+      ["./META-INF", ".", 904],
+      [
+        "./okhttp3/internal/publicsuffix/publicsuffixes.gz",
+        "./okhttp3/internal/publicsuffix",
+        72
+      ],
+      ["./okhttp3/internal/publicsuffix", "./okhttp3/internal", 72],
+      ["./okhttp3/internal", "./okhttp3", 72],
+      ["./okhttp3", ".", 72],
+      ["./play-services-basement.properties", ".", 8],
+      ["./classes2.dex", ".", 5152],
+      ["./classes.dex", ".", 13584],
+      ["./play-services-base.properties", ".", 8],
+      ["./lib/armeabi-v7a/libgifimage.so", "./lib/armeabi-v7a", 184],
+      ["./lib/armeabi-v7a/libnative-filters.so", "./lib/armeabi-v7a", 32],
+      [
+        "./lib/armeabi-v7a/libnative-imagetranscoder.so",
+        "./lib/armeabi-v7a",
+        592
+      ],
+      ["./lib/armeabi-v7a/libjsinspector.so", "./lib/armeabi-v7a", 72],
+      ["./lib/armeabi-v7a/libfolly_json.so", "./lib/armeabi-v7a", 608],
+      ["./lib/armeabi-v7a/libglog.so", "./lib/armeabi-v7a", 248],
+      ["./lib/armeabi-v7a/libstatic-webp.so", "./lib/armeabi-v7a", 664],
+      ["./lib/armeabi-v7a/libimagepipeline.so", "./lib/armeabi-v7a", 24],
+      ["./lib/armeabi-v7a/libglog_init.so", "./lib/armeabi-v7a", 40],
+      ["./lib/armeabi-v7a/libtool-checker.so", "./lib/armeabi-v7a", 32],
+      ["./lib/armeabi-v7a/libfolly_futures.so", "./lib/armeabi-v7a", 584],
+      ["./lib/armeabi-v7a/libhermes.so", "./lib/armeabi-v7a", 2368],
+      ["./lib/armeabi-v7a/libc++_shared.so", "./lib/armeabi-v7a", 1128],
+      [
+        "./lib/armeabi-v7a/libhermes-executor-release.so",
+        "./lib/armeabi-v7a",
+        536
+      ],
+      ["./lib/armeabi-v7a/libconceal.so", "./lib/armeabi-v7a", 416],
+      ["./lib/armeabi-v7a/libfb.so", "./lib/armeabi-v7a", 296],
+      ["./lib/armeabi-v7a/libreactnativejni.so", "./lib/armeabi-v7a", 1520],
+      ["./lib/armeabi-v7a/libyoga.so", "./lib/armeabi-v7a", 352],
+      ["./lib/armeabi-v7a", "./lib", 9696],
+      ["./lib/x86/libgifimage.so", "./lib/x86", 288],
+      ["./lib/x86/libnative-filters.so", "./lib/x86", 32],
+      ["./lib/x86/libnative-imagetranscoder.so", "./lib/x86", 1168],
+      ["./lib/x86/libjsinspector.so", "./lib/x86", 88],
+      ["./lib/x86/libfolly_json.so", "./lib/x86", 744],
+      ["./lib/x86/libglog.so", "./lib/x86", 344],
+      ["./lib/x86/libstatic-webp.so", "./lib/x86", 1376],
+      ["./lib/x86/libimagepipeline.so", "./lib/x86", 24],
+      ["./lib/x86/libglog_init.so", "./lib/x86", 56],
+      ["./lib/x86/libtool-checker.so", "./lib/x86", 16],
+      ["./lib/x86/libfolly_futures.so", "./lib/x86", 696],
+      ["./lib/x86/libhermes.so", "./lib/x86", 3824],
+      ["./lib/x86/libc++_shared.so", "./lib/x86", 1952],
+      ["./lib/x86/libhermes-executor-release.so", "./lib/x86", 648],
+      ["./lib/x86/libconceal.so", "./lib/x86", 520],
+      ["./lib/x86/libfb.so", "./lib/x86", 392],
+      ["./lib/x86/libreactnativejni.so", "./lib/x86", 1896],
+      ["./lib/x86/libyoga.so", "./lib/x86", 528],
+      ["./lib/x86", "./lib", 14592],
+      ["./lib/arm64-v8a/libgifimage.so", "./lib/arm64-v8a", 304],
+      ["./lib/arm64-v8a/libnative-filters.so", "./lib/arm64-v8a", 48],
+      ["./lib/arm64-v8a/libnative-imagetranscoder.so", "./lib/arm64-v8a", 936],
+      ["./lib/arm64-v8a/libjsinspector.so", "./lib/arm64-v8a", 96],
+      ["./lib/arm64-v8a/libfolly_json.so", "./lib/arm64-v8a", 688],
+      ["./lib/arm64-v8a/libglog.so", "./lib/arm64-v8a", 320],
+      ["./lib/arm64-v8a/libstatic-webp.so", "./lib/arm64-v8a", 992],
+      ["./lib/arm64-v8a/libimagepipeline.so", "./lib/arm64-v8a", 24],
+      ["./lib/arm64-v8a/libglog_init.so", "./lib/arm64-v8a", 64],
+      ["./lib/arm64-v8a/libtool-checker.so", "./lib/arm64-v8a", 16],
+      ["./lib/arm64-v8a/libfolly_futures.so", "./lib/arm64-v8a", 704],
+      ["./lib/arm64-v8a/libhermes.so", "./lib/arm64-v8a", 3344],
+      ["./lib/arm64-v8a/libc++_shared.so", "./lib/arm64-v8a", 1912],
+      ["./lib/arm64-v8a/libhermes-executor-release.so", "./lib/arm64-v8a", 664],
+      ["./lib/arm64-v8a/libconceal.so", "./lib/arm64-v8a", 528],
+      ["./lib/arm64-v8a/libfb.so", "./lib/arm64-v8a", 368],
+      ["./lib/arm64-v8a/libreactnativejni.so", "./lib/arm64-v8a", 1904],
+      ["./lib/arm64-v8a/libyoga.so", "./lib/arm64-v8a", 448],
+      ["./lib/arm64-v8a", "./lib", 13360],
+      ["./lib/x86_64/libgifimage.so", "./lib/x86_64", 296],
+      ["./lib/x86_64/libnative-filters.so", "./lib/x86_64", 56],
+      ["./lib/x86_64/libnative-imagetranscoder.so", "./lib/x86_64", 1184],
+      ["./lib/x86_64/libjsinspector.so", "./lib/x86_64", 88],
+      ["./lib/x86_64/libfolly_json.so", "./lib/x86_64", 688],
+      ["./lib/x86_64/libglog.so", "./lib/x86_64", 328],
+      ["./lib/x86_64/libstatic-webp.so", "./lib/x86_64", 1376],
+      ["./lib/x86_64/libimagepipeline.so", "./lib/x86_64", 24],
+      ["./lib/x86_64/libglog_init.so", "./lib/x86_64", 64],
+      ["./lib/x86_64/libtool-checker.so", "./lib/x86_64", 16],
+      ["./lib/x86_64/libfolly_futures.so", "./lib/x86_64", 720],
+      ["./lib/x86_64/libhermes.so", "./lib/x86_64", 3616],
+      ["./lib/x86_64/libc++_shared.so", "./lib/x86_64", 2032],
+      ["./lib/x86_64/libhermes-executor-release.so", "./lib/x86_64", 680],
+      ["./lib/x86_64/libconceal.so", "./lib/x86_64", 544],
+      ["./lib/x86_64/libfb.so", "./lib/x86_64", 368],
+      ["./lib/x86_64/libreactnativejni.so", "./lib/x86_64", 1952],
+      ["./lib/x86_64/libyoga.so", "./lib/x86_64", 456],
+      ["./lib/x86_64", "./lib", 14488],
+      ["./lib", ".", 52136],
+      ["./play-services-tasks.properties", ".", 8],
+      ["./firebase-iid.properties", ".", 8],
+      ["./play-services-stats.properties", ".", 8],
+      ["./sentry-build.properties", ".", 8],
+      ["./assets/index.android.bundle.map", "./assets", 8488],
+      ["./assets/index.android.bundle", "./assets", 19904],
+      ["./assets/fonts/Octicons.ttf", "./assets/fonts", 56],
+      ["./assets/fonts/Roboto-Medium.ttf", "./assets/fonts", 344],
+      ["./assets/fonts/Feather.ttf", "./assets/fonts", 128],
+      ["./assets/fonts/Roboto-Light.ttf", "./assets/fonts", 336],
+      ["./assets/fonts/OpenSans-Semibold.ttf", "./assets/fonts", 440],
+      ["./assets/fonts/Entypo.ttf", "./assets/fonts", 136],
+      ["./assets/fonts/FontAwesome5_Brands.ttf", "./assets/fonts", 248],
+      ["./assets/fonts/MaterialCommunityIcons.ttf", "./assets/fonts", 1040],
+      ["./assets/fonts/Roboto-Regular.ttf", "./assets/fonts", 336],
+      ["./assets/fonts/Roboto-MediumItalic.ttf", "./assets/fonts", 352],
+      ["./assets/fonts/AntDesign.ttf", "./assets/fonts", 144],
+      ["./assets/fonts/OpenSans-Light.ttf", "./assets/fonts", 440],
+      ["./assets/fonts/Foundation.ttf", "./assets/fonts", 112],
+      ["./assets/fonts/Ionicons.ttf", "./assets/fonts", 224],
+      ["./assets/fonts/FontAwesome5_Solid.ttf", "./assets/fonts", 368],
+      ["./assets/fonts/FontAwesome5_Regular.ttf", "./assets/fonts", 72],
+      ["./assets/fonts/OpenSans-Italic.ttf", "./assets/fonts", 416],
+      ["./assets/fonts/FontAwesome.ttf", "./assets/fonts", 328],
+      ["./assets/fonts/Zocial.ttf", "./assets/fonts", 56],
+      ["./assets/fonts/OpenSans-ExtraBold.ttf", "./assets/fonts", 440],
+      ["./assets/fonts/EvilIcons.ttf", "./assets/fonts", 32],
+      ["./assets/fonts/OpenSans-LightItalic.ttf", "./assets/fonts", 424],
+      ["./assets/fonts/Roboto-ThinItalic.ttf", "./assets/fonts", 352],
+      ["./assets/fonts/OpenSans-Bold.ttf", "./assets/fonts", 440],
+      ["./assets/fonts/Roboto-BoldItalic.ttf", "./assets/fonts", 344],
+      ["./assets/fonts/OpenSans-SemiboldItalic.ttf", "./assets/fonts", 416],
+      ["./assets/fonts/Roboto-LightItalic.ttf", "./assets/fonts", 352],
+      ["./assets/fonts/OpenSans-ExtraBoldItalic.ttf", "./assets/fonts", 424],
+      ["./assets/fonts/Roboto-Italic.ttf", "./assets/fonts", 344],
+      ["./assets/fonts/Roboto-BlackItalic.ttf", "./assets/fonts", 352],
+      ["./assets/fonts/SimpleLineIcons.ttf", "./assets/fonts", 112],
+      ["./assets/fonts/OpenSans-Regular.ttf", "./assets/fonts", 432],
+      ["./assets/fonts/OpenSans-BoldItalic.ttf", "./assets/fonts", 424],
+      ["./assets/fonts/Roboto-Bold.ttf", "./assets/fonts", 336],
+      ["./assets/fonts/Roboto-Thin.ttf", "./assets/fonts", 336],
+      ["./assets/fonts/Roboto-Black.ttf", "./assets/fonts", 336],
+      ["./assets/fonts/MaterialIcons.ttf", "./assets/fonts", 256],
+      ["./assets/fonts", "./assets", 11728],
+      ["./assets", ".", 40120],
+      ["./du-hermes.txt", ".", 0],
+      ["./firebase-common.properties", ".", 8],
+      [".", null, 127392]
+    ]);
+
+    var tree = new google.visualization.TreeMap(
+      document.getElementById("chart_div")
+    );
+
+    var options = {
+      highlightOnMouseOver: true,
+      maxDepth: 2,
+      maxPostDepth: 2,
+      minHighlightColor: "#8c6bb1",
+      midHighlightColor: "#9ebcda",
+      maxHighlightColor: "#edf8fb",
+      minColor: "#009688",
+      midColor: "#f7f7f7",
+      maxColor: "#ee8100",
+      headerHeight: 15,
+      showScale: true,
+      height: 500,
+      useWeightedAverageForAggregation: true,
+      generateTooltip: showFullTooltip
+    };
+
+    tree.draw(data, options);
+
+    function showFullTooltip(row, size, value) {
+      return (
+        '<div style="background:#fd9; padding:10px; border-style:solid">' +
+        '<span style="font-family:Courier"><b>' +
+        data.getValue(row, 2) +
+        "</span><br>" +
+        "</div>"
+      );
+    }
+  }
+</script>

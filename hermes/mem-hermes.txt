@@ -1,0 +1,61 @@
+Applications Memory Usage (in Kilobytes):
+Uptime: 30262387 Realtime: 82867154
+
+** MEMINFO in pid 467 [com.mattermost.rnbeta] **
+                   Pss  Private  Private  SwapPss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap    40366    40312        4       25    52224    45439     6784
+  Dalvik Heap     8401     8388        0       31    10866     5449     5417
+ Dalvik Other     1896     1896        0        0                           
+        Stack       92       92        0        0                           
+       Ashmem        2        0        0        0                           
+      Gfx dev     5792     4064        0        0                           
+    Other dev      140        0      140        0                           
+     .so mmap     4353      380     2804       17                           
+    .apk mmap     3469      184     1636        0                           
+    .ttf mmap       49        0        0        0                           
+    .dex mmap     8656       16     7060        0                           
+    .oat mmap      655        0        0        0                           
+    .art mmap     1720     1140       36        4                           
+   Other mmap      169       36       40        0                           
+   EGL mtrack    24660    24660        0        0                           
+    GL mtrack     2820     2820        0        0                           
+      Unknown    32996    32992        0        3                           
+        TOTAL   136316   116980    11720       80    63090    50888    12201
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     9564
+         Native Heap:    40312
+                Code:    12080
+               Stack:       92
+            Graphics:    31544
+       Private Other:    35108
+              System:     7616
+ 
+               TOTAL:   136316       TOTAL SWAP PSS:       80
+ 
+ Objects
+               Views:      348         ViewRootImpl:        1
+         AppContexts:        4           Activities:        1
+              Assets:       11        AssetManagers:        0
+       Local Binders:       20        Proxy Binders:       32
+       Parcel memory:       21         Parcel count:       39
+    Death Recipients:        0      OpenSSL Sockets:        2
+            WebViews:        0
+ 
+ SQL
+         MEMORY_USED:      349
+  PAGECACHE_OVERFLOW:      208          MALLOC_SIZE:      565
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4      160             42        25/36/4  /data/user/0/com.mattermost.rnbeta/databases/RKStorage
+ 
+ Asset Allocations
+    : 110K
+    : 162K
+    : 125K
+    : 182K
